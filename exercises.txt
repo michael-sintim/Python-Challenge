@@ -39,32 +39,8 @@ Exercise 5: Dictionary Comprehension
 python# Create a dictionary from 1 to 20 where:
 # - Key is the number
 # - Value is "even" or "odd", and "prime" or "composite"
-# Example: {2: "even prime", 3: "odd prime", 4: "even composite"}
-
-# Create a lambda function that calculates the area of a circle
-
-# Formula: area = π × r²
-
-# Use 3.14159 for π
-
-circle_area = # Your lambda here
-
-# Test it
-
-print(circle_area(5))    # Should print: 78.53975
-
-print(circle_area(10))   # Should print: 314.159
-
-# BONUS: Use map to calculate areas for multiple radii
-
-radii = [1, 2, 3, 4, 5]
-
-areas = # Your code here
-
-print(areas)  # Should print: [3.14159, 12.56636, 28.27431, 50.26544, 78.53975]
-
-
-# filter() works like map(), but keeps only items where the lambda returns True
+# Example: {2: "even prime", 3: "odd prime", 4:
+ "even composite"}
 
 # You have a list of temperatures in Celsius
 temperatures = [-5, 0, 10, 15, 20, 25, 30, 35]
