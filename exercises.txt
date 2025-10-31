@@ -1,0 +1,64 @@
+🎯 Practice Exercises
+Exercise 1: Word Counter
+python# Count how many times each word appears
+sentence = "the quick brown fox jumps over the lazy dog and the fox ran away"
+
+# Create a dictionary: word → count
+# Then print the 3 most common words
+Exercise 2: Student Gradebook
+python# Create a gradebook with:
+# - Student names as keys
+# - Dictionaries with subjects and grades as values
+# 
+# Then:
+# 1. Add a new student
+# 2. Update a grade
+# 3. Calculate each student's average
+# 4. Find the student with highest average
+
+Exercise 3: Set Operations
+python# Given two lists of email addresses:
+list1 = ["alice@email.com", "bob@email.com", "charlie@email.com"]
+list2 = ["bob@email.com", "david@email.com", "alice@email.com"]
+
+# Find:
+# 1. All unique emails
+# 2. Emails in both lists
+# 3. Emails only in list1
+# 4. Emails in exactly one list
+Exercise 4: Performance Challenge
+python# You have a list of 10,000 product IDs
+products = list(range(10000))
+
+# Write two functions to check if a product exists:
+# 1. Using a list (slow)
+# 2. Using a set (fast)
+#
+# Time both and compare!
+Exercise 5: Dictionary Comprehension
+python# Create a dictionary from 1 to 20 where:
+# - Key is the number
+# - Value is "even" or "odd", and "prime" or "composite"
+# Example: {2: "even prime", 3: "odd prime", 4: "even composite"}
+
+# Create a lambda function that calculates the area of a circle
+
+# Formula: area = π × r²
+
+# Use 3.14159 for π
+
+circle_area = # Your lambda here
+
+# Test it
+
+print(circle_area(5))    # Should print: 78.53975
+
+print(circle_area(10))   # Should print: 314.159
+
+# BONUS: Use map to calculate areas for multiple radii
+
+radii = [1, 2, 3, 4, 5]
+
+areas = # Your code here
+
+print(areas)  # Should print: [3.14159, 12.56636, 28.27431, 50.26544, 78.53975]
