@@ -1,0 +1,11 @@
+Your Name: mike
+Your Age: 23
+Your Favourite number: 53.0
+Your Year of birth: 2002
+Your Age in ten years: 33
+Your Favourite number squared: 2809.0
+Your Height in cm: 232.0
+Your Height in feet: 7.611548556430446
+Your BMI: 12.07639714625446 - [93mUnderweight[0m
+Your Hours alive: 201618.0
+Your days alive are: 8400.75
