@@ -55,19 +55,20 @@ def password_validator():
         if errors:
             print("Validation failed ")
             for error in errors:
-                print(f"error: {error}")
-        
+                print(f"error- {error}")
+               
             
         else: 
+            
             print("Password accepted")
+            return "Password accepted" 
+        
 
-
-        # print(f"Password strength: {strength}/100")
 
         
 
 if __name__ == "__main__":
-    password_validator()()
+    password_validator()
 
             
 

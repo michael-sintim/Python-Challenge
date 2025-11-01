@@ -1,6 +1,13 @@
 from Day7 import password_validator
 
-pword = input("Create a password: ")
 
 password_validator()
+
+if password_validator() == "Password accepted":
+    print("You have logged in")
+
+    
+
+    
+
 
