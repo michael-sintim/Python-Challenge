@@ -5,16 +5,6 @@ sentence = "the quick brown fox jumps over the lazy dog and the fox ran away"
 
 # Create a dictionary: word → count
 # Then print the 3 most common words
-Exercise 2: Student Gradebook
-python# Create a gradebook with:
-# - Student names as keys
-# - Dictionaries with subjects and grades as values
-# 
-# Then:
-# 1. Add a new student
-# 2. Update a grade
-# 3. Calculate each student's average
-# 4. Find the student with highest average
 
 Exercise 3: Set Operations
 python# Given two lists of email addresses:
@@ -41,37 +31,3 @@ python# Create a dictionary from 1 to 20 where:
 # - Value is "even" or "odd", and "prime" or "composite"
 # Example: {2: "even prime", 3: "odd prime", 4:
  "even composite"}
-
-# You have a list of temperatures in Celsius
-temperatures = [-5, 0, 10, 15, 20, 25, 30, 35]
-
-# Use filter with a lambda to get only temperatures above 20°C
-hot_days = list(filter(# Your lambda here, temperatures))
-
-print(hot_days)  # Should print: [25, 30, 35]
-
-# BONUS: Get temperatures below 10°C (cold days)
-cold_days = # Your code here
-print(cold_days)  # Should print: [-5, 0]
-
-# Create a lambda that returns "Even" if a number is even, "Odd" if odd
-# Hint: Use this pattern: value_if_true if condition else value_if_false
-# Remember: even numbers have x % 2 == 0
-
-check_even_odd = # Your lambda here
-
-print(check_even_odd(4))   # Should print: Even
-print(check_even_odd(7))   # Should print: Odd
-
-# BONUS: Use it with map!
-numbers = [1, 2, 3, 4, 5, 6]
-results = # Your map code here
-print(results)  # Should print: ['Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even']
-
-# Create a lambda that calculates the area of a rectangle
-# Formula: area = length × width
-
-rectangle_area = # Your lambda here (hint: lambda needs TWO parameters)
-
-print(rectangle_area(5, 10))  # Should print: 50
-print(rectangle_area(7, 3))   # Should print: 21

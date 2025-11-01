@@ -1,13 +1,3 @@
-num = range(1,21)
-
-for x in num:
-    if x % 3 == 0 and x % 5 ==0:
-        print (f"FizzBuzz")
-    elif x % 3 == 0:
-         print(f"Fizz")
-    elif x % 5 ==0:
-        print(f"Buzz") 
-
 
 #password validator
 
