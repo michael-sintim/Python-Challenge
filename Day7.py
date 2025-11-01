@@ -1,5 +1,5 @@
 #weekly assessment from day one 
-def main():
+def password_validator():
     while True:
         special_chars = "!@#$%^&*()_+-=[]{}|;:,.<>?"
         password  = input("Input Passwbsbsbsbord: ")
@@ -67,7 +67,7 @@ def main():
         
 
 if __name__ == "__main__":
-    main()
+    password_validator()()
 
             
 
