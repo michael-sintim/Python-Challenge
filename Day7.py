@@ -2,7 +2,7 @@
 def password_validator():
     while True:
         special_chars = "!@#$%^&*()_+-=[]{}|;:,.<>?"
-        password  = input("Input Passwbsbsbsbord: ")
+        password  = input("Input Password: ")
         # confrim_password = input("Confirm Password: ")
 
         errors = []
