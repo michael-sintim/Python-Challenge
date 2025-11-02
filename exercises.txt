@@ -1,3 +1,9 @@
+
+I have now been able to finish my week one studies with python. 
+ 
+ i would get Exercises here to do to perfect my craft 
+
+
 🎯 Practice Exercises
 Exercise 1: Word Counter
 python# Count how many times each word appears
@@ -31,3 +37,4 @@ python# Create a dictionary from 1 to 20 where:
 # - Value is "even" or "odd", and "prime" or "composite"
 # Example: {2: "even prime", 3: "odd prime", 4:
  "even composite"}
+
