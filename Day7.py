@@ -62,8 +62,6 @@ def password_validator():
             
             print("Password accepted")
             return "Password accepted" 
-        
-
 
         
 
