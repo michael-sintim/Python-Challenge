@@ -1,61 +1,100 @@
 from Day7 import password_validator
 
-while True: 
-    
-    def calculate(x: float ,y: float,operand: str)-> float:
-        x = float(input("Input a number:"))
-        y = float(input("Input a number:"))
-        operand = input("Input a operand:")
-
+def calculate()-> float:
+        
         try:
+            x = float(input("Input a number:"))
+            y = float(input("Input a number:"))
+            operand = input("Input a operand:")
 
-            if x/0 or y/0:
-                raise ZeroDivisionError
-
+            if  operand == '/' and y == 0:
+                print("Can't divide by 0")
+                return(None,None)
+            
+            elif  operand == '%' and y == 0:
+                print("Can't divide by 0")
+                return(None,None)
+            
             elif operand == "+":
-                return x + y
+                result = x + y
 
             elif operand == "-":
+                result = x -y
 
-
-                return x -y
             elif operand == "*":
 
-                return x * y
+                result = x * y
             elif operand == "/":
-                return x / y
+                result = x / y
             elif operand == "**":
-                return x ** y
+                result = x ** y
             elif operand == "%":
-                return x % y
+                result = x % y
+            
+            else:
+                print(f'Error, invalid operand: {operand}')
+                
+                return (None,None)
+            
 
-        except:
-            raise ValueError("Invalid operand")
+            calc_string = f"{x} {operand} {y} = {result}"
+            return (result,calc_string)
+        
+
+        except ValueError:
+            print("Invalid input")
+            return None
+        except ZeroDivisionError:
+            print("Invalid input")
+            return None
     
-    if password_validator() == "Password accepted":
+    
+    
+    
+if password_validator() == "Password accepted":
+    print("\n✅ Authentication successful!\n")
 
-        history = []
+        
+   
+    history = []
 
+    while True: 
         print("\n===SECURE CALCULATOR===")
         print("1. Perform calculation")
         print("2. View history")
         print("3. Clear history")
         print("4. Exit\n")
-    
-    choice = input("Input choice: ")
+
+        choice = input("Input choice: ")
+
+        if choice == '1':
+            result, calc_string  = calculate()
+            if result is not None:
+                print()
+                print(f" {calc_string}")
+                history.append(calc_string)
 
 
-    if choice == '1':
-        calculate()
+        elif choice == '2':
+            if not history:
+                print("No history yet")
+            # print(f"History: ",history if history else "No history yet") 
+            # 
+            else:
+                print('\n'+ "="*50)  
+                print("Calculation History")
+                print("="*50)
 
+                for x, calc in enumerate(history,1):
+                    print(f'{x}.{calc}')
 
-    elif choice == '2':
-        pass
-    
-    elif choice == '3':
-        pass
+                print("="*50 + '\n')
+        elif choice == '3':
+            history.clear()
+            print("You have cleared all history")
 
-    elif choice == '4':
-        print("Your program is over")
-        quit()
-    
+        elif choice == '4':
+            print("Your have exited the program")
+            quit()
+        else:
+            print("Invalid Choice")
