@@ -88,7 +88,7 @@ if password_validator() == "Password accepted":
                 for x, calc in enumerate(history,1):
                     print(f'{x}.{calc}')
 
-                print("="*50 + '\n'
+                print("="*50 + '\n')
         elif choice == '3':
             history.clear()
             print("You have cleared all history")
