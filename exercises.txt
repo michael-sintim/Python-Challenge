@@ -38,3 +38,39 @@ python# Create a dictionary from 1 to 20 where:
 # Example: {2: "even prime", 3: "odd prime", 4:
  "even composite"}
 
+ Implement a queue using two stacks
+(Hint: Use one stack for enqueue, another for dequeue)
+
+Intermediate Level
+
+Min Stack: Design a stack that supports push, pop, and retrieving the minimum element in O(1) time.
+Sliding Window Maximum: Use a deque to find the maximum in each sliding window of size k.
+
+Advanced Level
+
+Evaluate Postfix Expression: Use a stack to evaluate expressions like "3 4 + 2 *" = 14
+Design a Browser History System: Use stacks to implement back/forward buttons.
+
+
+
+Beginner:
+Create a program that asks users for their favorite books and saves them to a text file
+
+Write a script that counts how many times each word appears in a text file
+
+Create a simple address book that stores contacts in JSON format
+
+Intermediate:
+Build a program that converts between JSON and CSV formats
+
+Create a backup script that copies all .txt files from one directory to another
+
+Build a simple logging system that appends messages with timestamps to a file
+
+Advanced:
+Create a configuration manager that reads settings from JSON but can override them with environment variables
+
+Build a file organizer that sorts files into folders based on their extensions
+
+Create a data migration script that updates the format of old JSON files to a new version
+
