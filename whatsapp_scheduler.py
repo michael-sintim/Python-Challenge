@@ -158,16 +158,13 @@ class WhatsAppScheduler:
                         now = datetime.now()
                         send_time = now + timedelta(minutes=2)
                         
-                        pywhatkit.sendwhatmsg(
-                            contact['phone'],
-                            message,
-                            send_time.hour,
-                            send_time.minute,
-                            wait_time=20,  # Increased wait time
+                        pywhatkit.sendwhatmsg_instantly(
+                            phone_no=contact['phone'],
+                            message=message,
+                            wait_time=10,      # Wait for page to load
                             tab_close=True,
-                            close_time=3
-                        )
-                        
+                            close_time=2
+                        )                        
                         success_count += 1
                         break
                         
