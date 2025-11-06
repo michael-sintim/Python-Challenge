@@ -54,7 +54,6 @@ Design a Browser History System: Use stacks to implement back/forward buttons.
 
 
 Beginner:
-Create a simple address book that stores contacts in JSON format
 
 Intermediate:
 Build a program that converts between JSON and CSV formats
