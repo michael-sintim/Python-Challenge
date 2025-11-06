@@ -18,5 +18,7 @@ class Stack:
             return False
         
     def return_string(self,x: str):
-        
-        return x
+       while not self.is_empty():
+           reversed_str += self.pop()
+
+       return reversed_str
