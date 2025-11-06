@@ -18,7 +18,5 @@ class Stack:
             return False
         
     def return_string(self,x: str):
-        self.stack.append(x)
-        self.stack.pop()
-
+        
         return x
