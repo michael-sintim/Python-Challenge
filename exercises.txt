@@ -54,8 +54,6 @@ Design a Browser History System: Use stacks to implement back/forward buttons.
 
 
 Beginner:
-Create a program that asks users for their favorite books and saves them to a text file
-
 Write a script that counts how many times each word appears in a text file
 
 Create a simple address book that stores contacts in JSON format
