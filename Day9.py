@@ -12,7 +12,7 @@ while True:
             break
         
 
-with open(f"{name}_books.txt", 'w') as file:
+with open(f"C:\Users\user\Desktop\beginner\exercises.txt{name}_books.txt", 'w') as file:
     for i, book in enumerate(book_list,start=1):
          file.write(f"Book {i}: {book}\n")
 
