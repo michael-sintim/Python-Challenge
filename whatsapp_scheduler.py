@@ -1,26 +1,28 @@
 import pywhatkit
-import schedule
 import time
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime
 import webbrowser
 import pyautogui
 import sys
 import os
+import threading
 
-# Configure logging to handle Unicode properly
+# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('whatsapp_scheduler.log', encoding='utf-8'),
+        logging.FileHandler('whatsapp_spammer.log', encoding='utf-8'),
         logging.StreamHandler(sys.stdout)
     ]
 )
 
-class WhatsAppScheduler:
+class WhatsAppSpammer:
     def __init__(self):
         self.contacts = []
+        self.is_spamming = False
+        self.spam_thread = None
         self.setup_directories()
     
     def setup_directories(self):
@@ -30,7 +32,6 @@ class WhatsAppScheduler:
     
     def add_contact(self, phone_number, name=""):
         """Add WhatsApp contact with validation"""
-        # Clean phone number
         phone_number = self.clean_phone_number(phone_number)
         
         if not self.validate_phone_number(phone_number):
@@ -42,28 +43,20 @@ class WhatsAppScheduler:
         return True
     
     def clean_phone_number(self, phone_number):
-        """Clean and format phone number - FIXED VERSION"""
-        # Store original to check if it already has +
+        """Clean and format phone number"""
         original_has_plus = phone_number.startswith('+')
         
-        # Remove spaces, dashes, parentheses but KEEP the + if present
         if original_has_plus:
-            # Keep the + and clean the rest
             digits = ''.join(filter(str.isdigit, phone_number[1:]))
             cleaned = '+' + digits
         else:
-            # No +, clean all digits
             digits = ''.join(filter(str.isdigit, phone_number))
             
-            # Check if it's a Ghana number (starts with 233)
             if digits.startswith('233') and len(digits) > 3:
-                # It's already a Ghana number, add +
                 cleaned = '+' + digits
             elif len(digits) == 9:
-                # 9-digit Ghana number without country code
                 cleaned = '+233' + digits
             else:
-                # For other numbers, return as is (will fail validation)
                 cleaned = '+' + digits
         
         return cleaned
@@ -73,287 +66,255 @@ class WhatsAppScheduler:
         if not phone_number.startswith('+'):
             return False
         
-        # Remove + and check if it's all digits
         digits = phone_number[1:]
         if not digits.isdigit():
             return False
         
-        # Check Ghana number format (+233 followed by 9 digits)
         if phone_number.startswith('+233'):
-            if len(digits) != 12:  # 233 + 9 digits = 12 total
+            if len(digits) != 12:
                 return False
         
         return True
     
-    def save_contacts_to_file(self, filename="contacts/contacts_list.txt"):
-        """Save contacts to a file for persistence"""
+    def send_whatsapp_message_ultra_fast(self, phone_number, message):
+        """ULTRA-FAST direct method for spamming"""
         try:
-            with open(filename, 'w', encoding='utf-8') as f:
-                for contact in self.contacts:
-                    f.write(f"{contact['phone']},{contact['name']}\n")
-            logging.info(f"Contacts saved to {filename}")
-        except Exception as e:
-            logging.error(f"Failed to save contacts: {e}")
-    
-    def load_contacts_from_file(self, filename="contacts/contacts_list.txt"):
-        """Load contacts from file"""
-        try:
-            if os.path.exists(filename):
-                with open(filename, 'r', encoding='utf-8') as f:
-                    for line in f:
-                        line = line.strip()
-                        if line:
-                            parts = line.split(',')
-                            if len(parts) >= 2:
-                                self.add_contact(parts[0], parts[1])
-                logging.info(f"Contacts loaded from {filename}")
-        except Exception as e:
-            logging.error(f"Failed to load contacts: {e}")
-    
-    def send_whatsapp_message_direct(self, phone_number, message):
-        """Alternative method using direct browser automation"""
-        try:
-            # Format WhatsApp URL
             import urllib.parse
             encoded_message = urllib.parse.quote(message)
             url = f"https://web.whatsapp.com/send?phone={phone_number[1:]}&text={encoded_message}"
             
-            # Open in browser
+            # Open in browser (reuse same tab for speed)
             webbrowser.open(url)
-            time.sleep(10)  # Wait for page to load
+            time.sleep(3)  # Minimal wait for page load
             
-            # Press Enter to send
+            # Send message
             pyautogui.press('enter')
-            time.sleep(2)
+            time.sleep(0.1)  # Very short wait
             
-            # Close tab
-            pyautogui.hotkey('ctrl', 'w')
+            # Don't close tab to keep it fast
+            # pyautogui.hotkey('ctrl', 'w')
             
             return True
         except Exception as e:
-            logging.error(f"Direct method failed: {e}")
+            logging.error(f"Ultra-fast send failed: {e}")
             return False
     
-    def send_whatsapp_message(self, message, use_direct_method=False):
-        """Send WhatsApp message to all contacts with retry logic"""
-        success_count = 0
-        
-        if not self.contacts:
-            logging.error("No contacts to send messages to")
-            return 0
-        
-        for contact in self.contacts:
-            max_retries = 2
-            for attempt in range(max_retries):
-                try:
-                    logging.info(f"Attempting to send to {contact['name']} ({contact['phone']}) - Attempt {attempt + 1}")
-                    
-                    if use_direct_method:
-                        # Use direct browser method
-                        if self.send_whatsapp_message_direct(contact['phone'], message):
-                            success_count += 1
-                            break
-                    else:
-                        # Use pywhatkit method
-                        now = datetime.now()
-                        send_time = now + timedelta(minutes=2)
-                        
-                        pywhatkit.sendwhatmsg_instantly(
-                            phone_no=contact['phone'],
-                            message=message,
-                            wait_time=10,      # Wait for page to load
-                            tab_close=True,
-                            close_time=2
-                        )                        
-                        success_count += 1
-                        break
-                        
-                except Exception as e:
-                    error_msg = str(e)
-                    logging.warning(f"Attempt {attempt + 1} failed for {contact['phone']}: {error_msg}")
-                    
-                    if attempt < max_retries - 1:
-                        logging.info(f"Retrying in 30 seconds...")
-                        time.sleep(30)
-                    else:
-                        logging.error(f"Failed to send to {contact['phone']} after {max_retries} attempts")
-                        
-                        # Try direct method as fallback
-                        if not use_direct_method:
-                            logging.info("Trying direct method as fallback...")
-                            if self.send_whatsapp_message_direct(contact['phone'], message):
-                                success_count += 1
-                
-                # Wait between messages to avoid rate limiting
-                time.sleep(15)
-        
-        logging.info(f"WhatsApp sending completed: {success_count}/{len(self.contacts)} successful")
-        return success_count
-    
-    def schedule_hourly_messages(self, message_template, use_direct_method=False):
-        """Schedule WhatsApp messages every hour"""
-        def job():
-            current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            customized_message = f"{message_template}\n\nSent at: {current_time}"
-            
-            logging.info(f"Running scheduled job at {current_time}")
-            self.send_whatsapp_message(customized_message, use_direct_method)
-        
-        # Schedule every hour
-        schedule.every().hour.do(job)
-        logging.info("Hourly WhatsApp scheduler started")
-        
-        # Run immediately once
-        logging.info("Sending initial message...")
-        job()
-        
-        # Keep running
-        logging.info("Scheduler is running. Press Ctrl+C to stop.")
+    def send_whatsapp_message_instant(self, phone_number, message):
+        """Fast instant method"""
         try:
-            while True:
-                schedule.run_pending()
-                time.sleep(1)
-        except KeyboardInterrupt:
-            logging.info("Scheduler stopped by user")
-    
-    def send_test_message(self, phone_number, message="Test message from WhatsApp Scheduler"):
-        """Send a test message to verify setup"""
-        try:
-            logging.info(f"Sending test message to {phone_number}")
-            
-            now = datetime.now()
-            send_time = now + timedelta(minutes=2)
-            
-            pywhatkit.sendwhatmsg(
-                phone_number,
-                message,
-                send_time.hour,
-                send_time.minute,
-                wait_time=15,
-                tab_close=True
+            pywhatkit.sendwhatmsg_instantly(
+                phone_no=phone_number,
+                message=message,
+                wait_time=3,  # Minimal wait
+                tab_close=True,
+                close_time=1
             )
-            
-            logging.info("Test message sent successfully!")
             return True
-            
         except Exception as e:
-            logging.error(f"Test message failed: {e}")
+            logging.error(f"Instant send failed: {e}")
             return False
-
-def main():
-    """Main function to run the scheduler"""
-    print("\n" + "="*50)
-    print("WHATSAPP HOURLY MESSAGE SCHEDULER")
-    print("="*50)
-    print("GHANA NUMBER SUPPORT")
-    print("="*50)
     
-    # Create scheduler instance
-    scheduler = WhatsAppScheduler()
+    def start_ultra_spam(self, phone_number, message, delay=0.005):
+        """Start ultra-fast spamming in a separate thread"""
+        self.is_spamming = True
+        message_count = 0
+        start_time = time.time()
+        
+        logging.info(f"🚀 STARTING ULTRA SPAM MODE")
+        logging.info(f"📱 Target: {phone_number}")
+        logging.info(f"💬 Message: {message}")
+        logging.info(f"⚡ Delay: {delay} seconds")
+        logging.info(f"🛑 To stop: Press Ctrl+C or type 'stop'")
+        
+        try:
+            while self.is_spamming:
+                try:
+                    # Use ultra-fast direct method
+                    if self.send_whatsapp_message_ultra_fast(phone_number, message):
+                        message_count += 1
+                        
+                        # Show progress every 10 messages
+                        if message_count % 10 == 0:
+                            elapsed = time.time() - start_time
+                            rate = message_count / elapsed if elapsed > 0 else 0
+                            logging.info(f"📨 Sent {message_count} messages | Rate: {rate:.1f} msg/sec")
+                    
+                    # Ultra-short delay
+                    time.sleep(delay)
+                    
+                except Exception as e:
+                    logging.error(f"Spam error: {e}")
+                    # Continue spamming despite errors
+                    time.sleep(0.1)
+                    
+        except KeyboardInterrupt:
+            self.is_spamming = False
+            logging.info("🛑 Spamming stopped by user")
+        
+        elapsed = time.time() - start_time
+        final_rate = message_count / elapsed if elapsed > 0 else 0
+        
+        logging.info(f"✅ SPAMMING COMPLETED")
+        logging.info(f"📊 Total messages: {message_count}")
+        logging.info(f"⏱️  Total time: {elapsed:.1f} seconds")
+        logging.info(f"⚡ Average rate: {final_rate:.1f} messages/second")
+        
+        return message_count
     
-    # Load existing contacts from file (if any)
-    scheduler.load_contacts_from_file()
-    
-    # Show current contacts
-    if scheduler.contacts:
-        print(f"\nLoaded {len(scheduler.contacts)} contacts from file:")
-        for contact in scheduler.contacts:
-            print(f"  - {contact['name']}: {contact['phone']}")
-    else:
-        print("\nNo contacts found. Let's add some.")
-    
-    # Contact management
-    while True:
-        print("\nCONTACT MANAGEMENT:")
-        print("1. Add new contact")
-        print("2. Start messaging with current contacts")
-        print("3. Show current contacts")
-        print("4. Exit")
-        
-        choice = input("\nChoose option (1-4): ").strip()
-        
-        if choice == "1":
-            print("\nGHANA NUMBER FORMATS:")
-            print("  - +233532661209    (Full international)")
-            print("  - 0532661209       (Local with 0)")
-            print("  - 532661209        (Local without 0)")
-            
-            phone = input("\nEnter phone number: ").strip()
-            if phone:
-                name = input("Enter contact name (optional): ").strip()
-                original_phone = phone  # Store for display
-                if scheduler.add_contact(phone, name):
-                    scheduler.save_contacts_to_file()
-                    # Show what it was converted to
-                    final_phone = scheduler.contacts[-1]['phone']
-                    print(f"✅ Added: {name}")
-                    print(f"   Input: {original_phone}")
-                    print(f"   Final: {final_phone}")
-                else:
-                    print("❌ Failed to add contact. Please check the number format.")
-        
-        elif choice == "2":
-            if not scheduler.contacts:
-                print("No contacts added. Please add contacts first.")
-                continue
-            break
-        
-        elif choice == "3":
-            if scheduler.contacts:
-                print(f"\nCurrent contacts ({len(scheduler.contacts)}):")
-                for i, contact in enumerate(scheduler.contacts, 1):
-                    print(f"  {i}. {contact['name']} - {contact['phone']}")
-            else:
-                print("No contacts added yet.")
-        
-        elif choice == "4":
-            print("Goodbye!")
+    def start_spam_thread(self, phone_number, message, delay=0.005):
+        """Start spamming in a separate thread"""
+        if self.is_spamming:
+            logging.warning("⚠️ Spamming is already running!")
             return
         
+        self.spam_thread = threading.Thread(
+            target=self.start_ultra_spam,
+            args=(phone_number, message, delay)
+        )
+        self.spam_thread.daemon = True
+        self.spam_thread.start()
+        
+        logging.info("🧵 Spam thread started")
+    
+    def stop_spam(self):
+        """Stop the spamming"""
+        if self.is_spamming:
+            self.is_spamming = False
+            logging.info("🛑 Stopping spam...")
+            
+            if self.spam_thread and self.spam_thread.is_alive():
+                self.spam_thread.join(timeout=5)
+                logging.info("✅ Spam thread stopped")
         else:
-            print("Invalid choice. Please try again.")
+            logging.info("ℹ️ No active spam to stop")
+
+def main():
+    """Main function for ultra-fast WhatsApp spamming"""
+    print("\n" + "="*70)
+    print("💥 ULTRA-FAST WHATSAPP SPAMMER")
+    print("="*70)
+    print("⚡ Sends messages every 0.005 seconds")
+    print("🚀 EXTREME SPAMMING MODE")
+    print("="*70)
+    print("⚠️  WARNING: Use responsibly! May get your number temporarily banned!")
+    print("="*70)
     
-    # Message setup
-    print("\nMESSAGE SETUP:")
-    default_message = """Hello!
-
-This is your automated hourly update from our system.
-
-Everything is running smoothly!
-
-Have a great day!"""
+    spammer = WhatsAppSpammer()
     
-    print(f"Default message:\n{default_message}")
-    use_default = input("\nUse this message? (y/n): ").strip().lower()
+    # Get target number (your own number)
+    print("\n🎯 ENTER YOUR PHONE NUMBER TO SPAM YOURSELF:")
+    print("🇬🇭 GHANA NUMBER FORMATS:")
+    print("  - +233532661209    (Full international)")
+    print("  - 0532661209       (Local with 0)")
+    print("  - 532661209        (Local without 0)")
+    
+    while True:
+        phone = input("\n📱 Enter YOUR phone number: ").strip()
+        if phone:
+            if spammer.add_contact(phone, "SELF"):
+                final_phone = spammer.contacts[0]['phone']
+                print(f"✅ Target set: {final_phone}")
+                break
+            else:
+                print("❌ Invalid number. Please try again.")
+        else:
+            print("❌ Please enter a phone number.")
+    
+    # Get message
+    print("\n💬 ENTER SPAM MESSAGE:")
+    default_message = "SPAM TEST 🚀"
+    
+    print(f"Default message: {default_message}")
+    use_default = input("Use this message? (y/n): ").strip().lower()
     
     if use_default == 'y':
-        message_template = default_message
+        message = default_message
     else:
-        message_template = input("Enter your custom message: ").strip()
-        if not message_template:
-            message_template = default_message
+        message = input("Enter your spam message: ").strip() or default_message
     
-    # Sending method
-    print("\nSELECT SENDING METHOD:")
-    print("1. Standard method (Recommended)")
-    print("2. Direct browser method (Use if standard fails)")
-    method_choice = input("Enter 1 or 2: ").strip()
+    # Get delay (ultra-fast mode)
+    print("\n⚡ SPAM SPEED SETTINGS:")
+    print("1. ULTRA FAST (0.005 seconds) - EXTREME")
+    print("2. Very Fast (0.01 seconds) - INTENSE") 
+    print("3. Fast (0.05 seconds) - HEAVY")
+    print("4. Custom delay")
     
-    use_direct_method = (method_choice == "2")
+    speed_choice = input("Choose speed (1-4): ").strip()
     
-    # Start scheduler
-    print(f"\nStarting scheduler with {len(scheduler.contacts)} contacts...")
-    print("IMPORTANT: Make sure WhatsApp Web is OPEN in your browser!")
-    print("Messages will be sent every hour")
-    print("Press Ctrl+C to stop the scheduler\n")
+    if speed_choice == "1":
+        delay = 0.005
+    elif speed_choice == "2":
+        delay = 0.01
+    elif speed_choice == "3":
+        delay = 0.05
+    elif speed_choice == "4":
+        try:
+            custom_delay = float(input("Enter custom delay in seconds (e.g., 0.001): ").strip())
+            delay = max(0.001, custom_delay)  # Minimum 0.001 seconds
+        except:
+            delay = 0.005
+            print("⚠️  Invalid input, using ultra-fast (0.005s)")
+    else:
+        delay = 0.005
+        print("⚠️  Invalid choice, using ultra-fast (0.005s)")
+    
+    # Final confirmation
+    print(f"\n🎯 FINAL CONFIRMATION:")
+    print(f"   Target: {spammer.contacts[0]['phone']}")
+    print(f"   Message: {message}")
+    print(f"   Delay: {delay} seconds")
+    print(f"   Estimated rate: {1/delay:.0f} messages/second")
+    
+    print("\n⚠️  CRITICAL WARNINGS:")
+    print("   • WhatsApp may TEMPORARILY BAN your number")
+    print("   • Keep WhatsApp Web OPEN and ACTIVE")
+    print("   • Do not interact with browser during spamming")
+    print("   • Use at your own risk!")
+    
+    confirm = input("\n🚀 START EXTREME SPAMMING? (y/n): ").strip().lower()
+    if confirm != 'y':
+        print("👋 Operation cancelled.")
+        return
+    
+    # Start spamming
+    target_phone = spammer.contacts[0]['phone']
+    
+    print(f"\n💥 STARTING EXTREME SPAMMING...")
+    print(f"📱 Target: {target_phone}")
+    print(f"⚡ Speed: {1/delay:.0f} messages/second")
+    print(f"💬 Message: {message}")
+    print("\n🛑 TO STOP:")
+    print("   • Press Ctrl+C")
+    print("   • Or close the program")
+    print("   • Or wait for potential ban")
+    print("\n" + "="*70)
     
     try:
-        scheduler.schedule_hourly_messages(message_template, use_direct_method)
+        # Start spamming
+        spammer.start_spam_thread(target_phone, message, delay)
+        
+        # Keep main thread alive and listen for stop command
+        while spammer.is_spamming:
+            try:
+                user_input = input("Type 'stop' to end spamming: ").strip().lower()
+                if user_input == 'stop':
+                    spammer.stop_spam()
+                    break
+                time.sleep(0.1)
+            except KeyboardInterrupt:
+                spammer.stop_spam()
+                break
+            except:
+                # Continue running if input fails
+                time.sleep(0.1)
+                
     except KeyboardInterrupt:
-        print("\nScheduler stopped by user. Goodbye!")
+        spammer.stop_spam()
     except Exception as e:
-        logging.error(f"Scheduler crashed: {e}")
-        print("Tip: Try running with direct method (option 2)")
+        logging.error(f"Main loop error: {e}")
+        spammer.stop_spam()
+    
+    print("\n👋 Spammer shutdown complete.")
 
 if __name__ == "__main__":
     main()

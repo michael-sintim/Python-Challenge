@@ -1,0 +1,276 @@
+2025-11-05 12:00:41,092 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:01:10,412 - INFO - Contact added: ❤️Queen❤️ (+1233532661209)
+2025-11-05 12:01:10,415 - INFO - Contacts saved to contacts/contacts_list.txt
+2025-11-05 12:01:26,655 - INFO - Hourly WhatsApp scheduler started
+2025-11-05 12:01:26,657 - INFO - Sending initial message...
+2025-11-05 12:01:26,657 - INFO - Running scheduled job at 2025-11-05 12:01:26
+2025-11-05 12:01:26,657 - INFO - Attempting to send to ❤️Queen❤️ (+1233532661209) - Attempt 1
+2025-11-05 12:03:05,904 - INFO - Contact added: ❤️Queen❤️ (+11233532661209)
+2025-11-05 12:03:05,907 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:03:40,685 - ERROR - Invalid phone number: +13
+2025-11-05 12:07:19,749 - INFO - Contact added: Contact (+10547918877)
+2025-11-05 12:07:19,750 - INFO - Contacts saved to contacts/contacts_list.txt
+2025-11-05 12:07:29,807 - INFO - Hourly WhatsApp scheduler started
+2025-11-05 12:07:29,808 - INFO - Sending initial message...
+2025-11-05 12:07:29,808 - INFO - Running scheduled job at 2025-11-05 12:07:29
+2025-11-05 12:07:29,809 - INFO - Attempting to send to Contact (+10547918877) - Attempt 1
+2025-11-05 12:09:04,404 - INFO - WhatsApp sending completed: 1/1 successful
+2025-11-05 12:09:04,404 - INFO - Scheduler is running. Press Ctrl+C to stop.
+2025-11-05 12:10:59,066 - INFO - Scheduler stopped by user
+2025-11-05 12:11:04,652 - INFO - Contact added: Contact (+23310547918877)
+2025-11-05 12:11:04,653 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:11:16,706 - INFO - Contact added:  (+2330547918877)
+2025-11-05 12:11:16,707 - INFO - Contacts saved to contacts/contacts_list.txt
+2025-11-05 12:11:43,872 - INFO - Contact added: Erica (+233532661209)
+2025-11-05 12:11:43,873 - INFO - Contacts saved to contacts/contacts_list.txt
+2025-11-05 12:11:51,598 - INFO - Hourly WhatsApp scheduler started
+2025-11-05 12:11:51,599 - INFO - Sending initial message...
+2025-11-05 12:11:51,599 - INFO - Running scheduled job at 2025-11-05 12:11:51
+2025-11-05 12:11:51,599 - INFO - Attempting to send to Contact (+23310547918877) - Attempt 1
+2025-11-05 12:12:05,030 - INFO - Contact added: Contact (+23323310547918877)
+2025-11-05 12:12:05,031 - INFO - Contact added:  (+2332330547918877)
+2025-11-05 12:12:05,031 - INFO - Contact added: Erica (+233233532661209)
+2025-11-05 12:12:05,032 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:12:30,046 - ERROR - Invalid phone number: 23310547918877
+2025-11-05 12:12:30,046 - ERROR - Invalid phone number: 2330547918877
+2025-11-05 12:12:30,047 - ERROR - Invalid phone number: 233532661209
+2025-11-05 12:12:30,047 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:12:39,502 - ERROR - Invalid phone number: 547918877
+2025-11-05 12:12:57,248 - ERROR - Invalid phone number: 0547918877
+2025-11-05 12:13:13,252 - ERROR - Invalid phone number: 23310547918877
+2025-11-05 12:13:13,252 - ERROR - Invalid phone number: 2330547918877
+2025-11-05 12:13:13,252 - ERROR - Invalid phone number: 233532661209
+2025-11-05 12:13:13,252 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:13:20,626 - ERROR - Invalid phone number: 0547918877
+2025-11-05 12:13:46,638 - ERROR - Invalid phone number: 547918877
+2025-11-05 12:14:03,156 - ERROR - Invalid phone number: 0547918887
+2025-11-05 12:14:17,898 - INFO - Contact added: Contact (+123310547918877)
+2025-11-05 12:14:17,898 - INFO - Contact added:  (+12330547918877)
+2025-11-05 12:14:17,898 - INFO - Contact added: Erica (+1233532661209)
+2025-11-05 12:14:17,898 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:14:49,435 - INFO - Contact added: loop (+10547918877)
+2025-11-05 12:14:49,436 - INFO - Contacts saved to contacts/contacts_list.txt
+2025-11-05 12:15:06,553 - INFO - Contact added: Contact (+233123310547918877)
+2025-11-05 12:15:06,554 - INFO - Contact added:  (+23312330547918877)
+2025-11-05 12:15:06,554 - INFO - Contact added: Erica (+2331233532661209)
+2025-11-05 12:15:06,555 - INFO - Contact added: loop (+23310547918877)
+2025-11-05 12:15:06,555 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:15:23,287 - INFO - Contact added: Contact (+233123310547918877)
+2025-11-05 12:15:23,288 - INFO - Contact added:  (+23312330547918877)
+2025-11-05 12:15:23,288 - INFO - Contact added: Erica (+2331233532661209)
+2025-11-05 12:15:23,288 - INFO - Contact added: loop (+23310547918877)
+2025-11-05 12:15:23,288 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:15:32,905 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:15:32,906 - INFO - Contacts saved to contacts/contacts_list.txt
+2025-11-05 12:15:59,654 - INFO - Hourly WhatsApp scheduler started
+2025-11-05 12:15:59,655 - INFO - Sending initial message...
+2025-11-05 12:15:59,655 - INFO - Running scheduled job at 2025-11-05 12:15:59
+2025-11-05 12:15:59,655 - INFO - Attempting to send to Contact (+233123310547918877) - Attempt 1
+2025-11-05 12:17:03,116 - INFO - Contact added: Contact (+233233123310547918877)
+2025-11-05 12:17:03,117 - INFO - Contact added:  (+23323312330547918877)
+2025-11-05 12:17:03,117 - INFO - Contact added: Erica (+2332331233532661209)
+2025-11-05 12:17:03,117 - INFO - Contact added: loop (+23323310547918877)
+2025-11-05 12:17:03,117 - INFO - Contact added: erik (+233233532661209)
+2025-11-05 12:17:03,117 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:20:16,990 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:20:16,992 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:20:16,992 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:20:16,992 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:20:16,992 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:20:16,992 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:20:33,882 - INFO - Hourly WhatsApp scheduler started
+2025-11-05 12:20:33,882 - INFO - Sending initial message...
+2025-11-05 12:20:33,883 - INFO - Running scheduled job at 2025-11-05 12:20:33
+2025-11-05 12:20:33,883 - INFO - Attempting to send to erik (+233532661209) - Attempt 1
+2025-11-05 12:22:04,469 - INFO - WhatsApp sending completed: 1/1 successful
+2025-11-05 12:22:04,469 - INFO - Scheduler is running. Press Ctrl+C to stop.
+2025-11-05 12:22:33,930 - INFO - Scheduler stopped by user
+2025-11-05 12:22:42,482 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:22:42,482 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:22:42,482 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:22:42,482 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:22:42,483 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:22:42,483 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:23:08,443 - INFO - Hourly WhatsApp scheduler started
+2025-11-05 12:23:08,443 - INFO - Sending initial message...
+2025-11-05 12:23:08,444 - INFO - Running scheduled job at 2025-11-05 12:23:08
+2025-11-05 12:23:08,444 - INFO - Attempting to send to erik (+233532661209) - Attempt 1
+2025-11-05 12:25:04,013 - INFO - WhatsApp sending completed: 1/1 successful
+2025-11-05 12:25:04,013 - INFO - Scheduler is running. Press Ctrl+C to stop.
+2025-11-05 12:26:45,521 - INFO - Scheduler stopped by user
+2025-11-05 12:26:49,033 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:26:49,033 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:26:49,034 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:26:49,034 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:26:49,034 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:26:49,034 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:26:52,864 - INFO - Hourly WhatsApp scheduler started
+2025-11-05 12:26:52,864 - INFO - Sending initial message...
+2025-11-05 12:26:52,864 - INFO - Running scheduled job at 2025-11-05 12:26:52
+2025-11-05 12:26:52,865 - INFO - Attempting to send to erik (+233532661209) - Attempt 1
+2025-11-05 12:28:08,114 - WARNING - Attempt 1 failed for +233532661209: sleep length must be non-negative
+2025-11-05 12:28:08,114 - INFO - Retrying in 30 seconds...
+2025-11-05 12:28:24,116 - INFO - Attempting to send to erik (+233532661209) - Attempt 2
+2025-11-05 12:30:07,285 - WARNING - Attempt 2 failed for +233532661209: sleep length must be non-negative
+2025-11-05 12:30:07,288 - ERROR - Failed to send to +233532661209 after 2 attempts
+2025-11-05 12:30:07,288 - INFO - Trying direct method as fallback...
+2025-11-05 12:30:34,557 - INFO - WhatsApp sending completed: 1/1 successful
+2025-11-05 12:30:34,559 - INFO - Scheduler is running. Press Ctrl+C to stop.
+2025-11-05 12:31:01,976 - INFO - Scheduler stopped by user
+2025-11-05 12:31:05,644 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:31:05,644 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:31:05,644 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:31:05,644 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:31:05,645 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:31:05,645 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:31:35,277 - INFO - Hourly WhatsApp scheduler started
+2025-11-05 12:31:35,277 - INFO - Sending initial message...
+2025-11-05 12:31:35,277 - INFO - Running scheduled job at 2025-11-05 12:31:35
+2025-11-05 12:31:35,277 - INFO - Attempting to send to erik (+233532661209) - Attempt 1
+2025-11-05 12:33:03,769 - INFO - WhatsApp sending completed: 1/1 successful
+2025-11-05 12:33:03,769 - INFO - Scheduler is running. Press Ctrl+C to stop.
+2025-11-05 12:34:43,339 - INFO - Scheduler stopped by user
+2025-11-05 12:34:46,676 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:34:46,678 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:34:46,678 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:34:46,680 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:34:46,682 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:34:46,684 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:35:08,854 - INFO - Hourly WhatsApp scheduler started
+2025-11-05 12:35:08,854 - INFO - Sending initial message...
+2025-11-05 12:35:08,854 - INFO - Running scheduled job at 2025-11-05 12:35:08
+2025-11-05 12:35:08,854 - INFO - Attempting to send to erik (+233532661209) - Attempt 1
+2025-11-05 12:35:08,855 - WARNING - Attempt 1 failed for +233532661209: sendwhatmsg_instantly() got multiple values for argument 'wait_time'
+2025-11-05 12:35:08,855 - INFO - Retrying in 30 seconds...
+2025-11-05 12:35:36,446 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:35:36,446 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:35:36,447 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:35:36,447 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:35:36,447 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:35:36,447 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:35:50,089 - INFO - ⏰ INSTANT Hourly WhatsApp scheduler started
+2025-11-05 12:35:50,089 - INFO - 🚀 Sending initial message INSTANTLY...
+2025-11-05 12:35:50,090 - INFO - ⏰ Running INSTANT scheduled job at 2025-11-05 12:35:50
+2025-11-05 12:35:50,090 - INFO - ⚡ Sending INSTANTLY to erik (+233532661209)
+2025-11-05 12:35:50,091 - INFO - 🔄 Opening WhatsApp for +233532661209...
+2025-11-05 12:36:02,576 - INFO - ✅ Message sent instantly to +233532661209
+2025-11-05 12:36:02,576 - INFO - 📊 Instant sending completed: 1/1 successful
+2025-11-05 12:36:02,576 - INFO - 🔄 Instant scheduler is running. Press Ctrl+C to stop.
+2025-11-05 12:36:54,405 - INFO - 🛑 Scheduler stopped by user
+2025-11-05 12:36:57,690 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:36:57,691 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:36:57,691 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:36:57,691 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:36:57,692 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:36:57,692 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:37:04,935 - INFO - ⏰ INSTANT Hourly WhatsApp scheduler started
+2025-11-05 12:37:04,935 - INFO - 🚀 Sending initial message INSTANTLY...
+2025-11-05 12:37:04,935 - INFO - ⏰ Running INSTANT scheduled job at 2025-11-05 12:37:04
+2025-11-05 12:37:04,935 - INFO - ⚡ Sending INSTANTLY to erik (+233532661209)
+2025-11-05 12:37:04,936 - INFO - 🚀 Opening WhatsApp Web directly...
+2025-11-05 12:37:14,244 - INFO - ✅ Direct instant message sent to +233532661209
+2025-11-05 12:37:14,245 - INFO - 📊 Instant sending completed: 1/1 successful
+2025-11-05 12:37:14,245 - INFO - 🔄 Instant scheduler is running. Press Ctrl+C to stop.
+2025-11-05 12:37:54,365 - INFO - 🛑 Scheduler stopped by user
+2025-11-05 12:37:57,828 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:37:57,828 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:37:57,828 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:37:57,828 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:37:57,828 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:37:57,829 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:38:04,058 - INFO - ⏰ INSTANT Hourly WhatsApp scheduler started
+2025-11-05 12:38:04,059 - INFO - 🚀 Sending initial message INSTANTLY...
+2025-11-05 12:38:04,059 - INFO - ⏰ Running INSTANT scheduled job at 2025-11-05 12:38:04
+2025-11-05 12:38:04,060 - INFO - ⚡ Sending INSTANTLY to erik (+233532661209)
+2025-11-05 12:38:04,061 - INFO - 🚀 Opening WhatsApp Web directly...
+2025-11-05 12:38:13,368 - INFO - ✅ Direct instant message sent to +233532661209
+2025-11-05 12:38:13,368 - INFO - 📊 Instant sending completed: 1/1 successful
+2025-11-05 12:38:13,369 - INFO - 🔄 Instant scheduler is running. Press Ctrl+C to stop.
+2025-11-05 12:38:32,274 - INFO - 🛑 Scheduler stopped by user
+2025-11-05 12:38:35,468 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:38:35,468 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:38:35,468 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:38:35,468 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:38:35,468 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:38:35,468 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:38:39,594 - INFO - ⏰ INSTANT Hourly WhatsApp scheduler started
+2025-11-05 12:38:39,595 - INFO - 🚀 Sending initial message INSTANTLY...
+2025-11-05 12:38:39,596 - INFO - ⏰ Running INSTANT scheduled job at 2025-11-05 12:38:39
+2025-11-05 12:38:39,598 - INFO - ⚡ Sending INSTANTLY to erik (+233532661209)
+2025-11-05 12:38:39,600 - INFO - 🚀 Opening WhatsApp Web directly...
+2025-11-05 12:38:49,018 - INFO - ✅ Direct instant message sent to +233532661209
+2025-11-05 12:38:49,019 - INFO - 📊 Instant sending completed: 1/1 successful
+2025-11-05 12:38:49,020 - INFO - 🔄 Instant scheduler is running. Press Ctrl+C to stop.
+2025-11-05 12:38:58,488 - INFO - 🛑 Scheduler stopped by user
+2025-11-05 12:39:02,999 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:39:02,999 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:39:02,999 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:39:02,999 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:39:02,999 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:39:02,999 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:39:13,766 - INFO - Hourly WhatsApp scheduler started
+2025-11-05 12:39:13,766 - INFO - Sending initial message...
+2025-11-05 12:39:13,768 - INFO - Running scheduled job at 2025-11-05 12:39:13
+2025-11-05 12:39:13,768 - INFO - Attempting to send to erik (+233532661209) - Attempt 1
+2025-11-05 12:39:13,768 - WARNING - Attempt 1 failed for +233532661209: sendwhatmsg_instantly() got multiple values for argument 'wait_time'
+2025-11-05 12:39:13,769 - INFO - Retrying in 30 seconds...
+2025-11-05 12:39:57,335 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:39:57,335 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:39:57,335 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:39:57,335 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:39:57,336 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:39:57,336 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:40:01,959 - INFO - Hourly WhatsApp scheduler started
+2025-11-05 12:40:01,960 - INFO - Sending initial message...
+2025-11-05 12:40:01,960 - INFO - Running scheduled job at 2025-11-05 12:40:01
+2025-11-05 12:40:01,960 - INFO - Attempting to send to erik (+233532661209) - Attempt 1
+2025-11-05 12:42:04,473 - INFO - WhatsApp sending completed: 1/1 successful
+2025-11-05 12:42:04,473 - INFO - Scheduler is running. Press Ctrl+C to stop.
+2025-11-05 12:43:06,503 - INFO - Scheduler stopped by user
+2025-11-05 12:43:26,555 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:43:26,555 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:43:26,555 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:43:26,555 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:43:26,555 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:43:26,555 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:43:36,719 - INFO - Hourly WhatsApp scheduler started
+2025-11-05 12:43:36,719 - INFO - Sending initial message...
+2025-11-05 12:43:36,719 - INFO - Running scheduled job at 2025-11-05 12:43:36
+2025-11-05 12:43:36,719 - INFO - Attempting to send to erik (+233532661209) - Attempt 1
+2025-11-05 12:43:49,206 - INFO - WhatsApp sending completed: 1/1 successful
+2025-11-05 12:43:49,206 - INFO - Scheduler is running. Press Ctrl+C to stop.
+2025-11-05 12:49:06,952 - INFO - Scheduler stopped by user
+2025-11-05 12:49:10,966 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:49:10,966 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:49:10,966 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:49:10,966 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:49:10,966 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:49:10,972 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:49:36,264 - INFO - ⏰ Minutely scheduler started - 10 messages per minute
+2025-11-05 12:49:36,264 - INFO - 🚀 Sending initial messages...
+2025-11-05 12:49:36,264 - INFO - ⏰ Running minutely job at 2025-11-05 12:49:36
+2025-11-05 12:49:36,264 - INFO - 📨 Sending 10 messages per minute to 1 contacts
+2025-11-05 12:49:36,286 - INFO - ⏱️  Delay between messages: 6.0 seconds
+2025-11-05 12:49:36,287 - INFO - 🔄 Sending message 1/10
+2025-11-05 12:49:36,289 - INFO - 📱 Sending to erik (+233532661209)
+2025-11-05 12:49:51,551 - INFO - ⏳ Waiting 54.0s before next batch...
+2025-11-05 12:50:35,078 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:50:35,078 - ERROR - Invalid phone number: +23312330547918877
+2025-11-05 12:50:35,078 - ERROR - Invalid phone number: +2331233532661209
+2025-11-05 12:50:35,078 - ERROR - Invalid phone number: +23310547918877
+2025-11-05 12:50:35,078 - INFO - Contact added: erik (+233532661209)
+2025-11-05 12:50:35,078 - INFO - Contacts loaded from contacts/contacts_list.txt
+2025-11-05 12:50:51,846 - INFO - ⏰ Minutely scheduler started - 9 messages per minute
+2025-11-05 12:50:51,846 - INFO - 🚀 Sending initial messages...
+2025-11-05 12:50:51,846 - INFO - ⏰ Running minutely job at 2025-11-05 12:50:51
+2025-11-05 12:50:51,846 - INFO - 📨 Sending 9 messages per minute to 1 contacts
+2025-11-05 12:50:51,846 - INFO - ⏱️  Delay between messages: 6.7 seconds
+2025-11-05 12:50:51,853 - INFO - 🔄 Sending message 1/9
+2025-11-05 12:50:51,853 - INFO - 📱 Sending to erik (+233532661209)
+2025-11-05 12:51:07,794 - INFO - ⏳ Waiting 53.3s before next batch...
+2025-11-05 12:52:01,128 - INFO - 🔄 Sending message 2/9
+2025-11-05 12:52:01,128 - INFO - 📱 Sending to erik (+233532661209)
+2025-11-05 12:52:17,050 - INFO - ⏳ Waiting 46.7s before next batch...
+2025-11-05 12:53:03,722 - INFO - 🔄 Sending message 3/9
+2025-11-05 12:53:03,722 - INFO - 📱 Sending to erik (+233532661209)
+2025-11-05 12:53:19,628 - INFO - ⏳ Waiting 40.0s before next batch...
