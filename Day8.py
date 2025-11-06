@@ -1,12 +1,24 @@
-#how to use stacks , deques, 
 
-def reverse_string(s):
-       # Your code here
-       stack = []
-       stack.append("Shoe")
-       stack.append("Camera")
-       stack[::-1]
-       return stack
+class Stack:
+    def __init__(self):
+       self.stack = []
 
-reverse_string("Shoee")
-      
+
+    def push(self,data):
+        self.stack.append(data)
+
+    def pop(self):
+        popped_item = self.stack.pop()
+        return popped_item
+
+    def is_empty(self):
+        if len(self.stack ) == 0:
+              return True 
+        else:
+            return False
+        
+    def return_string(self,x: str):
+        self.stack.append(x)
+        self.stack.pop()
+
+        return x
