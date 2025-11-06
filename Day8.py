@@ -18,7 +18,17 @@ class Stack:
             return False
         
     def return_string(self,x: str):
+       reversed_str= ''
+
+       for char in x:
+           self.push(char)
+           
        while not self.is_empty():
            reversed_str += self.pop()
 
        return reversed_str
+    
+stack = Stack()
+text = input("Enter a text to reverse: ")
+RESULT =  stack.return_string(text)
+print(f"Result: {RESULT}")
