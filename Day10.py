@@ -72,7 +72,9 @@ while True:
     
     elif choice == "4":
         with open(f"{name}.pkl",'rb') as f:
-            pickle.load(data,f)
+            loaded_data = pickle.load(f)
+
+        print(f"Deserialized data: {loaded_data}")
         
     elif choice == "5":
         quit()
