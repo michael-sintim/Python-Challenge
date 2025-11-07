@@ -52,8 +52,39 @@ Evaluate Postfix Expression: Use a stack to evaluate expressions like "3 4 + 2 *
 Design a Browser History System: Use stacks to implement back/forward buttons.
 
 
+#asnycio
+Build async data processor + security vulnerability scan
 
-Beginner:
+Exercise 1: Web Scraper Comparison
+Build the same web scraper using:
+
+Sequential requests
+
+Threading
+
+Async/await
+
+Time each approach and compare results.
+
+Exercise 2: Image Processor
+Process multiple images using:
+
+Sequential processing
+
+Multiprocessing
+
+ThreadPoolExecutor vs ProcessPoolExecutor
+
+Exercise 3: Mixed Workload
+Create a program that handles both:
+
+I/O: Fetching data from URLs
+
+CPU: Processing that data
+
+Use the right tool for each part.
+
+
 
 Intermediate:
 Build a program that converts between JSON and CSV formats
