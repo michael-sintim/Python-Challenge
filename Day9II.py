@@ -17,3 +17,8 @@ x = {
 
 json_converter = json.dumps(x)
 
+with open(f"{name}_contact.json", "w") as file:
+    for i,z in enumerate (x):
+        file.write(f"{i}: {z}")
+        
+
