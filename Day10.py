@@ -28,8 +28,8 @@ with open(file_path,'r') as file:
 folder_path_csv = r"C:\Users\user\Desktop\beginner\csv_files"
 file_path_csv = os.path.join(folder_path,f"{name}.csv")
 
-with open(f"{name}.csv",'w', newline="") as csvfile:
-    
+with open(file_path_csv,'w', newline="") as csvfile:
+
     fieldnames = data.keys()
     writer = csv.DictWriter(csvfile,fieldnames=fieldnames)
     writer.writeheader()
@@ -46,15 +46,21 @@ while True:
     choice = input("Input your choice: ")
 
     if choice == "1":
-        with open(file_path,"r") as file:
-            loaded_file = json.load(file)
+        with open(file_path,'r') as file:
+            data = json.load(file)
 
-        with open(file_path,"w") as file: 
-            csv.DictWriter(["Name","Age","Email"])
+        
+        with open(file_path_csv,'w', newline="") as csvfile:
+        
+            fieldnames = data.keys()
+            writer = csv.DictWriter(csvfile,fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerow(data)
 
     elif choice == "2":
-        csv.DictReader(file)
-        json.dump(file)
+        with open (file_path_csv,"r") as csvfile:
+            csv_file = csv.DictReader(csvfile)
+            save_csv_file = json.dump(csv_file)
 
     elif choice == "3":
         pickle.dump(file)
