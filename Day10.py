@@ -7,7 +7,7 @@ import csv
 import pickle
 
 name :str = input("Input name: ")
-age :int = input("Input age: ")
+age = input("Input age: ")
 email:str = input("Input email: ")
 
 contact :dict[str,str|int]= {
@@ -47,7 +47,7 @@ while True:
 
     if choice == "1":
         with open(file_path,'r') as file:
-            data :object = json.load(file)
+            data = json.load(file)
 
         with open(file_path_csv,'w', newline="") as csvfile:
         
