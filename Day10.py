@@ -22,6 +22,17 @@ file_path = os.path.join(folder_path,f"{name}_data.json")
 with open(file_path,'w') as file:
     json.dump(contact,file,indent=4)
 
+with open(file_path,'r') as file:
+    data = json.load(file)
+
+with open(f"{name}.csv",'w', newline="") as csvfile:
+    fieldnames = data.keys()
+    writer = csv.DictWriter(csvfile,fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerow(data)
+
+
+
 while True:
     print("1. Load JSON and convert to CSV ")
     print("2. Load CSV and convert to JSON")
@@ -33,7 +44,9 @@ while True:
     if choice == "1":
         with open(file_path,"r") as file:
             loaded_file = json.load(file)
-            csv.DictWriter(file)
+
+        with open(file_path,"w") as file: 
+            csv.DictWriter(["Name","Age","Email"])
 
     elif choice == "2":
         csv.DictReader(file)
