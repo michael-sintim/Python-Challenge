@@ -6,18 +6,19 @@ import json
 import csv
 import pickle
 
-name = input("Input name: ")
-age = input("Input age: ")
-email = input("Input email: ")
+name :str = input("Input name: ")
+age :int = input("Input age: ")
+email:str = input("Input email: ")
 
-contact = {
+contact :dict[str,str|int]= {
     "Name":name,
     "Age" : age,
     "Email": email,
 }
 
-folder_path = r"C:\Users\user\Desktop\beginner\json"
-file_path = os.path.join(folder_path,f"{name}_data.json")
+folder_path :str = r"C:\Users\user\Desktop\beginner\json"
+file_path :str = os.path.join(folder_path,f"{name}_data.json")
+
 
 with open(file_path,'w') as file:
     json.dump(contact,file,indent=4)
@@ -25,8 +26,8 @@ with open(file_path,'w') as file:
 with open(file_path,'r') as file:
     data = json.load(file)
 
-folder_path_csv = r"C:\Users\user\Desktop\beginner\csv_files"
-file_path_csv = os.path.join(folder_path_csv,f"{name}.csv")
+folder_path_csv :str = r"C:\Users\user\Desktop\beginner\csv_files"
+file_path_csv :str= os.path.join(folder_path_csv,f"{name}.csv")
 
 with open(file_path_csv,'w', newline="") as csvfile:
     fieldnames = data.keys()
@@ -46,7 +47,7 @@ while True:
 
     if choice == "1":
         with open(file_path,'r') as file:
-            data = json.load(file)
+            data :object = json.load(file)
 
         with open(file_path_csv,'w', newline="") as csvfile:
         
