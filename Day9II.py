@@ -18,7 +18,7 @@ x = {
 json_converter = json.dumps(x)
 
 with open(rf"C:\Users\user\Desktop\beginner\json\{name}_contact.json", "w") as file:
-    file.write(f"Name: {name}\n")
-    file.write(f"Number: {number}\n")
+    file.write(f"Name: {json_converter}\n")
+    file.write(f"Number: {json_converter}\n")
         
 
