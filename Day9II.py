@@ -16,5 +16,4 @@ x = {
 }
 
 json_converter = json.dumps(x)
-print(json_converter)
 
