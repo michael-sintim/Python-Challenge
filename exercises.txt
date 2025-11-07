@@ -69,3 +69,8 @@ Build a file organizer that sorts files into folders based on their extensions
 
 Create a data migration script that updates the format of old JSON files to a new version
 
+Log Parser: Extract all timestamps from logs like: [2024-01-15 14:30:22] Error occurred
+
+Data Cleaner: Remove all non-alphanumeric characters from a string except spaces
+
+URL Extractor: Find all URLs in text and separate protocol, domain, and path

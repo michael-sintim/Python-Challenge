@@ -32,7 +32,7 @@ while True:
     if re.search(r'(.)\1{2,}', password):
         errors.append("❌ Password should not have repeated characters (3+ in a row)")
     
-    # Calculate password strength (only if no errors)
+    # Password Strength: Check if password has: 8+ chars, 1 uppercase, 1 lowercase, 1 digit, 1 special char
     if not errors:
         strength = 0
         
