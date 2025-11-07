@@ -29,7 +29,6 @@ folder_path_csv = r"C:\Users\user\Desktop\beginner\csv_files"
 file_path_csv = os.path.join(folder_path,f"{name}.csv")
 
 with open(file_path_csv,'w', newline="") as csvfile:
-
     fieldnames = data.keys()
     writer = csv.DictWriter(csvfile,fieldnames=fieldnames)
     writer.writeheader()
@@ -49,7 +48,6 @@ while True:
         with open(file_path,'r') as file:
             data = json.load(file)
 
-        
         with open(file_path_csv,'w', newline="") as csvfile:
         
             fieldnames = data.keys()
