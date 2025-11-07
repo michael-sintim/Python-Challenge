@@ -26,7 +26,7 @@ with open(file_path,'r') as file:
     data = json.load(file)
 
 folder_path_csv = r"C:\Users\user\Desktop\beginner\csv_files"
-file_path_csv = os.path.join(folder_path,f"{name}.csv")
+file_path_csv = os.path.join(folder_path_csv,f"{name}.csv")
 
 with open(file_path_csv,'w', newline="") as csvfile:
     fieldnames = data.keys()
@@ -59,7 +59,6 @@ while True:
         with open (file_path_csv,"r") as csvfile:
             csv_file = list(csv.DictReader(csvfile))
             
-
         with open(file_path,'w') as jsonfile:
             json.dump(csv_file,jsonfile,indent=4)
 
