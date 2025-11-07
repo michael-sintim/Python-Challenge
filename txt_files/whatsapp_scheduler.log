@@ -108,7 +108,7 @@
 2025-11-05 12:26:52,864 - INFO - Sending initial message...
 2025-11-05 12:26:52,864 - INFO - Running scheduled job at 2025-11-05 12:26:52
 2025-11-05 12:26:52,865 - INFO - Attempting to send to erik (+233532661209) - Attempt 1
-2025-11-05 12:28:08,114 - WARNING - Attempt 1 failed for +233532661209: sleep length must be non-negative
+2025-11-05 12:28:08,114 - WARNING - Attempt 1 failed for +23353266121209: sleep length must be non-negative
 2025-11-05 12:28:08,114 - INFO - Retrying in 30 seconds...
 2025-11-05 12:28:24,116 - INFO - Attempting to send to erik (+233532661209) - Attempt 2
 2025-11-05 12:30:07,285 - WARNING - Attempt 2 failed for +233532661209: sleep length must be non-negative
@@ -117,7 +117,7 @@
 2025-11-05 12:30:34,557 - INFO - WhatsApp sending completed: 1/1 successful
 2025-11-05 12:30:34,559 - INFO - Scheduler is running. Press Ctrl+C to stop.
 2025-11-05 12:31:01,976 - INFO - Scheduler stopped by user
-2025-11-05 12:31:05,644 - ERROR - Invalid phone number: +233123310547918877
+2025-11-05 12:31:05,644 - ERROR - Invalid phone number: +23312331210547918877
 2025-11-05 12:31:05,644 - ERROR - Invalid phone number: +23312330547918877
 2025-11-05 12:31:05,644 - ERROR - Invalid phone number: +2331233532661209
 2025-11-05 12:31:05,644 - ERROR - Invalid phone number: +23310547918877
