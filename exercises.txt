@@ -53,7 +53,6 @@ Design a Browser History System: Use stacks to implement back/forward buttons.
 
 
 #asnycio
-Build async data processor + security vulnerability scan
 
 Exercise 1: Web Scraper Comparison
 Build the same web scraper using:
