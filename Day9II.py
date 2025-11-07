@@ -2,3 +2,19 @@
 import os 
 import json
 
+
+name = input("Input your name: ")
+number = input("Input your number: ")
+
+
+
+x = {
+
+    "name":name,
+    "number": number
+
+}
+
+json_converter = json.dumps(x)
+
+
