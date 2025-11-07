@@ -59,15 +59,21 @@ while True:
 
     elif choice == "2":
         with open (file_path_csv,"r") as csvfile:
-            csv_file = csv.DictReader(csvfile)
-            save_csv_file = json.dump(csv_file)
+            csv_file = list(csv.DictReader(csvfile))
+            
+
+        with open(file_path,'w') as jsonfile:
+            json.dump(csv_file,jsonfile,indent=4)
 
     elif choice == "3":
-        pickle.dump(file)
-
+        with open(f"{name}.pkl",'wb') as f:
+            pickle.dump(data,f)
+        
+    
     elif choice == "4":
-        pickle.loads(file)
-
+        with open(f"{name}.pkl",'rb') as f:
+            pickle.load(data,f)
+        
     elif choice == "5":
         quit()
         
