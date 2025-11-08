@@ -104,3 +104,5 @@ Log Parser: Extract all timestamps from logs like: [2024-01-15 14:30:22] Error o
 Data Cleaner: Remove all non-alphanumeric characters from a string except spaces
 
 URL Extractor: Find all URLs in text and separate protocol, domain, and path
+
+wont be easy tho buh would try to finish 
